@@ -1,8 +1,8 @@
-import plants from "./assets/data/plants.json";
+import { plants } from "./assets/data/plants.js";
 import type { Plant } from "./types.js";
 
 export const getPlants = async (): Promise<Plant[]> => {
-  return plants as Plant[];
+  return plants;
 };
 
 export const getPlantDetails = async (id: string) => {

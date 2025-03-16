@@ -8,7 +8,7 @@ root.render(
   <MemoryRouter>
     <Routes>
       <Route path="/" element={<Plants />} />
-      <Route path="/detail/:species" element={<PlantDetail />} />
+      <Route path="/detail/:id" element={<PlantDetail />} />
     </Routes>
   </MemoryRouter>
 );
