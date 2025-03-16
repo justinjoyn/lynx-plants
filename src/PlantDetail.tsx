@@ -16,11 +16,11 @@ export const PlantDetail = () => {
   }, [id]);
 
   return (
-    <view>
-      <text>{plant?.name}</text>
-      <text>{plant?.description}</text>
-      <text>{plant?.species}</text>
-      <text>{plant?.link}</text>
+    <view class="container">
+      <text class="title">{plant?.name}</text>
+      <text class="description">{plant?.description}</text>
+      <text class="species">{plant?.species}</text>
+      <text class="link">{plant?.link}</text>
     </view>
   );
 };

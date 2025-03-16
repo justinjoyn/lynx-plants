@@ -1,0 +1,26 @@
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
+
+.species {
+  font-size: 16px;
+  color: #666;
+}
+
+.link {
+  font-size: 16px;
+  color: #666;
+}
