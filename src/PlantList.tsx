@@ -11,11 +11,15 @@ export const PlantList = () => {
   const [plants, setPlants] = useState<Plant[]>([]);
 
   useEffect(() => {
-    getPlants().then((plants) => setPlants(plants));
+    getPlants().then((plants) => {
+      console.log("plants", plants?.length);
+      setPlants(plants);
+    });
   }, []);
 
   const handleTap = (plant: Plant) => {
-    navigate(`/detail/${plant.species}`);
+    const speciesNameFromUrl = plant.link.split("/").pop();
+    navigate(`/detail/${speciesNameFromUrl}`);
   };
 
   return (
