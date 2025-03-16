@@ -1,0 +1,33 @@
+.plant-list-item {
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.plant-list-item:last-child {
+  border-bottom: none;
+}
+
+.plant-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.plant-list-item:active {
+  background-color: #e0e0e0;
+}
+
+.plant-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.plant-species {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+.plant-link {
+  color: #000;
+  text-decoration: none;
+}

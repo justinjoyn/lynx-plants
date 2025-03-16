@@ -1,3 +1,4 @@
+import uuid
 import json
 import re
 from bs4 import BeautifulSoup
@@ -39,6 +40,9 @@ def parse_li(li):
         return None  # Skip this li if the common name is empty.
     entry["name"] = common_name
 
+    # Generate a unique id for the plant.
+    entry["id"] = str(uuid.uuid4())
+
     # Process the first <a> tag for species info.
     a_tag = li.find("a")
     if a_tag:
@@ -66,8 +70,8 @@ def parse_html_to_json_flat(html_content):
     return plants
 
 def main():
-    input_file = "../data/plants.html"   # Input HTML file.
-    output_file = "../data/plants.json"  # Output JSON file.
+    input_file = "../src/assets/data/plants.html"   # Input HTML file.
+    output_file = "../src/assets/data/plants.json"  # Output JSON file.
     
     # Read the HTML content from the file.
     with open(input_file, "r", encoding="utf-8") as f:
